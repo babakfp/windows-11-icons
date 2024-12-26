@@ -22,6 +22,14 @@
         searchedIcons.slice(0, page * perPage),
     )
     const isIconsLeftToShow = $derived(searchedIcons.length > pageIcons.length)
+
+    let searchInput: HTMLInputElement
+
+    $effect(() => {
+        if (document.activeElement === document.body) {
+            searchInput.focus()
+        }
+    })
 </script>
 
 <div class="container pb-24 pt-12">
@@ -30,6 +38,7 @@
         type="search"
         placeholder="Search icons..."
         bind:value={search}
+        bind:this={searchInput}
     />
 
     {#if pageIcons.length}
