@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply outline-none drag-none;
+    }
+}
+
+@layer utilities {
+    .container {
+        @apply max-w-screen-xl;
+    }
+}
