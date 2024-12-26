@@ -36,7 +36,7 @@
         <ul
             class="mt-12 grid grid-cols-[repeat(auto-fill,minmax(12rem,1fr))] gap-8"
         >
-            {#each pageIcons as icon}
+            {#each pageIcons as icon (icon.name)}
                 <Card {icon} />
             {/each}
         </ul>
