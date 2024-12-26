@@ -27,7 +27,7 @@
 
     {#if iconsToShow.length}
         <ul
-            class="mt-12 grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] gap-8"
+            class="mt-12 grid grid-cols-[repeat(auto-fill,minmax(12rem,1fr))] gap-8"
         >
             {#each iconsToShow.slice(0, 12) as icon}
                 <Card {icon} />
