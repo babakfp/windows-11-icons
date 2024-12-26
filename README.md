@@ -1,0 +1,2 @@
+- Source of `.svg` icons: https://github.com/icon11-community/Folder11
+- Source of `.ico` icons: https://github.com/icon11-community/Folder11-Ico
