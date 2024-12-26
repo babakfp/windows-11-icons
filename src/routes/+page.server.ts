@@ -1,20 +1,11 @@
-import { Octokit } from "@octokit/rest"
-import { GITHUB_TOKEN } from "$env/static/private"
+import type { SvgFiles } from "$lib/server/getAllSvgFiles"
+import { transformFiles } from "$lib/server/transformFiles.js"
 
 export const load = async ({ fetch }) => {
-    const octokit = new Octokit({ auth: GITHUB_TOKEN, request: { fetch } })
-
-    const res = await octokit.repos.getContent({
-        owner: "icon11-community",
-        repo: "Folder11",
-        path: "svg",
-    })
-
-    const files = (Array.isArray(res.data) ? res.data : []).filter(
-        (entry) => entry.type === "file" && entry.name.endsWith(".svg"),
-    )
+    const files: SvgFiles = await (await fetch("/files")).json()
+    const icons = transformFiles(files)
 
     return {
-        files,
+        icons,
     }
 }

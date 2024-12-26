@@ -1,35 +1,11 @@
 <script lang="ts">
     let { data } = $props()
-
-    const icons = data.files
-        .map((file) => {
-            const title = file.name
-                .replace(".svg", "")
-                .replace("-", " ")
-                .split("_")
-                .map((word) => {
-                    if (word === "to") {
-                        return word
-                    }
-                    if (["3d", "4k", "mp3"].includes(word)) {
-                        return word.toUpperCase()
-                    }
-                    return word.charAt(0).toUpperCase() + word.slice(1)
-                })
-                .join(" ")
-
-            return {
-                title,
-                ...file,
-            }
-        })
-        .sort((a, b) => a.name.localeCompare(b.name))
 </script>
 
 <div class="container">
-    {#if icons.length}
+    {#if data.icons.length}
         <ul class="grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] gap-8">
-            {#each icons as icon}
+            {#each data.icons as icon}
                 <li class="grid justify-center text-center">
                     <img
                         class="size-32"
