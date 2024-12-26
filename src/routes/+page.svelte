@@ -6,7 +6,7 @@
 
     let search = $state("")
     let page = $state(1)
-    const perPage = 10
+    const perPage = 100
 
     const searchedIcons = $derived.by(() => {
         if (!search) return data.icons
