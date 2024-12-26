@@ -1,10 +1,10 @@
 import { Octokit } from "@octokit/rest"
-import { GITHUB_TOKEN } from "$env/static/private"
+import { env } from "$env/dynamic/private"
 
 type SvelteKitLoadFetch = typeof fetch
 
 export const getAllSvgFiles = async (fetch: SvelteKitLoadFetch) => {
-    const octokit = new Octokit({ auth: GITHUB_TOKEN, request: { fetch } })
+    const octokit = new Octokit({ auth: env.GITHUB_TOKEN, request: { fetch } })
 
     const res = await octokit.repos.getContent({
         owner: "icon11-community",
