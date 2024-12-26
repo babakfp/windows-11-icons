@@ -32,6 +32,10 @@
     })
 </script>
 
+<svelte:head>
+    <title>Windows 11 Icons</title>
+</svelte:head>
+
 <div class="container pb-24 pt-12">
     <input
         class="h-12 w-full rounded border-2 border-gray-800 bg-gray-900 px-4 reset-search-input"
