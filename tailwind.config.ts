@@ -15,6 +15,9 @@ export default {
                 center: true,
                 padding: "1rem",
             },
+            borderRadius: {
+                DEFAULT: "0.5rem",
+            },
         },
         fontFamily: {
             sans: ["Recursive"],
