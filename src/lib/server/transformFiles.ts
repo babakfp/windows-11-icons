@@ -25,3 +25,5 @@ export const transformFiles = (files: SvgFiles) => {
         })
         .sort((a, b) => a.name.localeCompare(b.name))
 }
+
+export type Icons = Awaited<ReturnType<typeof transformFiles>>
