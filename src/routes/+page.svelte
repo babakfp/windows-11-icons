@@ -6,7 +6,9 @@
     {#if data.icons.length}
         <ul class="grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] gap-8">
             {#each data.icons as icon}
-                <li class="grid justify-center text-center">
+                <li
+                    class="grid justify-center justify-items-center text-center"
+                >
                     <img
                         class="size-32"
                         src={icon.download_url}
