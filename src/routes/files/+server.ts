@@ -1,7 +1,7 @@
-import { getAllSvgFiles } from "$lib/server/getAllSvgFiles"
+import { getIcons } from "$lib/server/getIcons"
 
 export const GET = async ({ fetch }) => {
-    const files = await getAllSvgFiles(fetch)
+    const files = await getIcons(fetch)
 
     return new Response(JSON.stringify(files), {
         headers: {

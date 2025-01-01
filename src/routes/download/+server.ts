@@ -1,7 +1,7 @@
 import { error } from "@sveltejs/kit"
 
 /** @type {import('./$types').RequestHandler} */
-export async function GET({ params, url }) {
+export async function GET({ url }) {
     const slug = url.searchParams.get("slug")
     const format = url.searchParams.get("format")
 

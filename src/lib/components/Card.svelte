@@ -1,13 +1,21 @@
 <script lang="ts">
-    import type { Icons } from "$lib/server/transformFiles"
+    import type { Icons } from "$lib/server/getIcons"
 
-    let { icon }: { icon: Icons[number] } = $props()
+    let {
+        icon,
+    }: {
+        icon: Icons[number]
+    } = $props()
 
     const slug = icon.name.replace(".svg", "")
 </script>
 
 <li class="flex flex-col rounded border-2 border-gray-800 text-center">
-    <img class="mx-auto size-32" src={icon.download_url} alt={icon.title} />
+    <img
+        class="mx-auto size-32"
+        src="https://raw.githubusercontent.com/icon11-community/Folder11/main/svg/{slug}.svg"
+        alt={icon.title}
+    />
     <p class="px-6 pb-4">{icon.title}</p>
     <div class="mt-auto border-t border-gray-800 px-6 pb-6 pt-6">
         <div class="flex justify-between text-xs">
