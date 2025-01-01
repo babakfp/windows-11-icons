@@ -40,7 +40,7 @@
     <input
         class="h-12 w-full rounded border-2 border-gray-800 bg-gray-900 px-4 reset-search-input"
         type="search"
-        placeholder="Search icons..."
+        placeholder="Search through {data.icons.length} available icons..."
         bind:value={search}
         bind:this={searchInput}
     />
