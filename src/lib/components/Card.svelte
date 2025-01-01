@@ -13,7 +13,7 @@
 <li class="flex flex-col rounded border-2 border-gray-800 text-center">
     <img
         class="mx-auto size-32"
-        src="https://raw.githubusercontent.com/icon11-community/Folder11/main/svg/{slug}.svg"
+        src="https://raw.githubusercontent.com/icon11-community/Folder11-Ico/main/ico/{slug}.ico"
         alt={icon.title}
     />
     <p class="px-6 pb-4">{icon.title}</p>
