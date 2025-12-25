@@ -6,14 +6,12 @@
     }: {
         icon: Icons[number]
     } = $props()
-
-    const slug = icon.name.replace(".svg", "")
 </script>
 
 <li class="flex flex-col rounded border-2 border-gray-800 text-center">
     <img
         class="mx-auto size-32"
-        src="https://raw.githubusercontent.com/icon11-community/Folder-Ico/main/ico/{slug}.ico"
+        src="https://raw.githubusercontent.com/icon11-community/Folder-Ico/main/ico/{icon.name}.ico"
         alt={icon.title}
         loading="lazy"
     />
@@ -25,7 +23,7 @@
                 <li>
                     <a
                         class="underline"
-                        href="/download?slug={slug}&format=svg"
+                        href="/download?slug={icon.name}&format=svg"
                     >
                         <code>SVG</code>
                     </a>
@@ -34,7 +32,7 @@
                 <li>
                     <a
                         class="underline"
-                        href="/download?slug={slug}&format=ico"
+                        href="/download?slug={icon.name}&format=ico"
                     >
                         <code>ICO</code>
                     </a>
