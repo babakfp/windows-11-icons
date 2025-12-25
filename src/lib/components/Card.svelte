@@ -13,8 +13,9 @@
 <li class="flex flex-col rounded border-2 border-gray-800 text-center">
     <img
         class="mx-auto size-32"
-        src="https://raw.githubusercontent.com/icon11-community/Folder11/main/svg/{slug}.svg"
+        src="https://raw.githubusercontent.com/icon11-community/Folder-Ico/main/ico/{slug}.ico"
         alt={icon.title}
+        loading="lazy"
     />
     <p class="px-6 pb-4">{icon.title}</p>
     <div class="mt-auto border-t border-gray-800 px-6 pb-6 pt-6">

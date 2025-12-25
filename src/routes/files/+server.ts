@@ -1,6 +1,7 @@
 import { getIcons } from "$lib/server/getIcons"
+import type { RequestHandler } from "./$types"
 
-export const GET = async ({ fetch }) => {
+export const GET: RequestHandler = async ({ fetch }) => {
     const files = await getIcons(fetch)
 
     return new Response(JSON.stringify(files), {
